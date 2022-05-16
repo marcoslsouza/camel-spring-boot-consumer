@@ -13,4 +13,7 @@ camel:
       username: admin
       password: admin
 
-      
+application:
+  rabbitmq:
+    queue:
+      employee: rabbitmq:ex-employee?connectionFactory=#rabbitConnectionFactory&queue=queue-employee&autoDelete=false&guaranteedDeliveries=true&mandatory=true
