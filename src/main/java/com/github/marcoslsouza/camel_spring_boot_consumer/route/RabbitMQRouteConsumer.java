@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 @Configuration
 @RequiredArgsConstructor
-public class RabbitMQRouteProducer extends RouteBuilder {
+public class RabbitMQRouteConsumer extends RouteBuilder {
 
 	private final DefaultErrorHandlerProcessor defaultErrorHandlerProcessor;
 	
@@ -20,8 +20,6 @@ public class RabbitMQRouteProducer extends RouteBuilder {
 	
 	@Override
 	public void configure() throws Exception {
-		
-//		JacksonDataFormat jsonDataFormat = new JacksonDataFormat();
 		
 		errorHandler(defaultErrorHandler()
 				.log("Error in RabbitMQRouteProducer")
